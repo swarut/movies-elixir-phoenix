@@ -21,12 +21,40 @@ These are the components of our Web Application:
 Then install the Movies dataset with `:play movies`, click and hit the "Run" button.
 
 
-### Install
+## Install
 
     $ git clone https://github.com/neo4j-examples/movies-elixir-phoenix
     $ cd movies-elixir-phoenix
     $ mix do deps.get, deps.compile
 
+### Configure the access to your Neo4j server
+
+Edit the `config/config.exs` and describe the Neo4j server endpoint, example:
+
+    config :neo4j_sips, Neo4j,
+      url: "http://localhost:7474",
+      pool_size: 5,
+      max_overflow: 2,
+      timeout: 30
+
+If your server requires basic authentication, add this to your config file:
+
+    basic_auth: [username: "foo", password: "bar"]
+
+or, if using a token, you can specify it like this: 
+
+    token_auth: "bmVvNGo6O12kzdA=="
+
+Sample configuration: 
+
+    config :neo4j_sips, Neo4j,
+      url: "http://localhost:7474",
+      basic_auth: [username: "foo", password: "bar"],
+      pool_size: 5,
+      max_overflow: 2,
+      timeout: 30
+
+more details and examples, here: [Neo4j.Sips](https://github.com/florinpatrascu/neo4j_sips)
 
 ### Run
 
@@ -35,7 +63,7 @@ Start the Phoenix server:
     $ cd movies-elixir-phoenix
     $ mix phoenix.server
 
-Point your browser to: `http://localhost:4000`, and you'll something like this:
+Point your browser to: `http://localhost:4000`, and you'll see something like this:
 
 ![](web/static/elixir_movies_demo.png)
 

@@ -1,6 +1,13 @@
 ## The Movies Example Application
 
-A very simple web application using [Neo4j](http://neo4j.com/developer/get-started/) with [Elixir](http://elixir-lang.org), [Phoenix](http://www.phoenixframework.org) and [Neo4j.Sips(β)](https://github.com/florinpatrascu/neo4j_sips).
+**Update**:  2017-01-09
+  - working with Elixir 1.3/1.4 and the latest Neo4j.Sips driver (0.2.17)
+  - supporting the Neo4j servers version 3.0.x/3.1.0
+
+**Update**:  2016-07-26 
+  - using [Elixir 1.3.2](http://elixir-lang.org), [Phoenix 1.2.0](https://hex.pm/packages/phoenix/1.2.0) and the [Neo4j 3](https://neo4j.com/developer/get-started/) server
+
+A very simple web application using [Neo4j](http://neo4j.com/developer/get-started/) with [Elixir](http://elixir-lang.org), [Phoenix](http://www.phoenixframework.org) and the [Neo4j.Sips](https://github.com/florinpatrascu/neo4j_sips) driver.
 
 ### The Stack
 
@@ -8,7 +15,7 @@ These are the components of our Web Application:
 
 - Application Type: An [Elixir](http://elixir-lang.org) [Phoenix](http://www.phoenixframework.org) web application
 - Web framework: [Phoenix](http://www.phoenixframework.org)
-- Persistence Access: [Neo4j.Sips(β)](https://github.com/florinpatrascu/neo4j_sips)
+- Persistence Access: [Neo4j.Sips](https://github.com/florinpatrascu/neo4j_sips)
 - Database: [Neo4j](http://neo4j.com/developer/get-started/) Server with Movies dataset
 - Frontend: jquery, bootstrap
 
@@ -23,8 +30,8 @@ Then install the Movies dataset with `:play movies`, click and hit the "Run" but
 
 ## Install
 
-    $ git clone https://github.com/neo4j-examples/movies-elixir-phoenix
-    $ cd movies-elixir-phoenix
+    $ git clone https://github.com/neo4j-examples/movies_elixir_phoenix
+    $ cd movies_elixir_phoenix
     $ mix do deps.get, deps.compile
 
 ### Configure the access to your Neo4j server
@@ -60,7 +67,7 @@ more details and examples, here: [Neo4j.Sips](https://github.com/florinpatrascu/
 
 Start the Phoenix server:
 
-    $ cd movies-elixir-phoenix
+    $ cd movies_elixir_phoenix
     $ mix phoenix.server
 
 Point your browser to: `http://localhost:4000`, and you'll see something like this:
@@ -89,5 +96,6 @@ Oh, oh, and some **endpoints**, of course :)
 
 ### License
 
-MIT
+**MIT**
+
 
